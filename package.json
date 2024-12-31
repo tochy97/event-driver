@@ -1,0 +1,25 @@
+{
+  "name": "@egeonu/event-driver",
+  "version": "0.0.1",
+  "description": "Event subscribing and dispatching manager that allows attaching callbacks, and pass json objects.",
+  "main": "index.ts",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tochy97/event-driver.git"
+  },
+  "keywords": [
+    "event-emitter"
+  ],
+  "author": "Tochy Egeonu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tochy97/event-driver/issues"
+  },
+  "homepage": "https://github.com/tochy97/event-driver#readme"
+}
