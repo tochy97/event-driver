@@ -1,6 +1,6 @@
-export class EventDriver {
+module.exports = class EventDriver {
     id: string;
-    data?: any;
+    data?: any = {};
     self: HTMLElement;
     event: Event;
 
@@ -22,7 +22,8 @@ export class EventDriver {
         )
     }
 
-    invoke (input: any) {
+    invoke (input?: any) {
+        this.data[this.id] = input;
         this.self.dispatchEvent(this.event);
     }
 }
