@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "target": "es6",
+    "target": "ES5",
     "moduleResolution": "node",
     "lib": [
       "dom",
@@ -15,8 +15,9 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "outDir": "./build/",
+    "outDir": "lib",
     "sourceMap": true,
+    "declaration": true
   },
   "exclude": [
       "./src/test"
