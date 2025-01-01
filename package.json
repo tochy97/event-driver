@@ -28,7 +28,10 @@
     "url": "git+https://github.com/tochy97/event-driver.git"
   },
   "keywords": [
-    "event-emitter"
+    "event-emitter",
+    "event-dispatching",
+    "event-driven",
+    "event"
   ],
   "author": "Tochy Egeonu",
   "license": "ISC",
