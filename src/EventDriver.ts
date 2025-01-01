@@ -1,4 +1,4 @@
-module.exports = class EventDriver {
+export default class EventDriver {
     id: string;
     data?: any = {};
     self: HTMLElement;
