@@ -1,6 +1,6 @@
 export default class EventDriver {
     id: string;
-    data?: any = {};
+    data?: any;
     self: HTMLElement;
     event: Event;
 
@@ -16,14 +16,14 @@ export default class EventDriver {
             this.id,
             (e: any) => {
                 if (typeof callback === "function") {
-                    callback(this.data[this.id]);
+                    callback(this.data);
                 }
             }
         )
     }
 
     invoke (input?: any) {
-        this.data[this.id] = input;
+        this.data = input;
         this.self.dispatchEvent(this.event);
     }
 }
