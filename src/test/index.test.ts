@@ -1,17 +1,17 @@
 import EventDriver from "../../lib/EventDriver.mjs"
 it("Test", () => {
-    const event = new EventDriver({action:"test"});
-    expect(event.id).toBe("test");
-    const callback1 = (input: string) => {
-        console.log("1-" + input);
+    const event = new EventDriver({action:"action"});
+    expect(event.id).toBe("action");
+    const callback1 = (input: any) => {
+        console.log("1-" + input.text);
     }
 
-    const callback2 = (input: string) => {
-        console.log("2-" + input);
+    const callback2 = (input: any) => {
+        console.log("2-" + input.text);
     }
 
-    const callback3 = (input: string) => {
-        console.log("3-" + input);
+    const callback3 = (input: any) => {
+        console.log("3-" + input.text);
     }
 
     event.subscribe(callback1);
@@ -19,5 +19,5 @@ it("Test", () => {
     event.subscribe(callback3);
     console.log("Starting tests...");
 
-    event.invoke("test");
+    event.invoke({text: "test"});
 })
