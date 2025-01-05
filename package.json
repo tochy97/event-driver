@@ -1,8 +1,8 @@
 {
   "name": "@egeonu/event-driver",
-  "version": "0.0.4",
+  "version": "0.0.9",
   "description": "Event subscribing and dispatching manager that allows attaching callbacks, and passing json objects.",
-  "main": "/lib/src/index.js",
+  "main": "lib/index.js",
   "files": [
     "lib/**/*"
   ],
