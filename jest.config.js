@@ -3,6 +3,6 @@ export default {
   testEnvironment: "jsdom",
   transform: {
     "^.+.tsx?$": ["ts-jest",{}],
-      "^.+.mjs?$": "babel-jest"
+      "^.+.js?$": "babel-jest"
   },
 };
