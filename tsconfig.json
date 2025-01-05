@@ -19,7 +19,10 @@
     "sourceMap": true,
     "declaration": true
   },
+  "include": [
+    "./src"
+  ],
   "exclude": [
-      "./src/test"
+      "./src/test",
   ]
 }

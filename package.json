@@ -1,6 +1,6 @@
 {
-  "name": "@egeonu/event-driver-types",
-  "version": "0.0.1",
+  "name": "@egeonu/event-driver",
+  "version": "0.0.4",
   "description": "Event subscribing and dispatching manager that allows attaching callbacks, and passing json objects.",
   "main": "/lib/src/index.js",
   "files": [
@@ -38,14 +38,12 @@
     "listener",
     "observer"
   ],
-  "author": "Tochy Egeonu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tochy97/event-driver/issues"
   },
   "homepage": "https://github.com/tochy97/event-driver#readme",
   "dependencies": {
-    "@egeonu/event-driver": "file:",
-    "@egeonu/event-driver-types": "file:"
+    "@egeonu/event-driver": "file:"
   }
 }

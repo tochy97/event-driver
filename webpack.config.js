@@ -6,7 +6,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
   entry: {
-    EventDriver: './src/EventDriver.ts',
+    EventDriver: './lib/index.js',
   },
   mode: "production",
   module: {
@@ -23,7 +23,7 @@ export default {
   },
   output: {
     filename: '[name].mjs',
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, 'dist'),
     library: {
       type: "module",
     },

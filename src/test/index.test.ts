@@ -1,4 +1,4 @@
-import EventDriver from "../../lib/src/index.js"
+import EventDriver from "../../dist/EventDriver.mjs"
 it("Test", () => {
     const event = new EventDriver({action:"action"});
     expect(event.id).toBe("action");
