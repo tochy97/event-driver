@@ -1,6 +1,6 @@
 import EventDriver from "../../lib/index.js"
 it("Test", () => {
-    const event = new EventDriver({action:"action"});
+    const event = new EventDriver({id:"action"});
     expect(event.id).toBe("action");
     const callback1 = (input: any) => {
         console.log("1-" + input.text);

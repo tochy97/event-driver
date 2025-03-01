@@ -1,29 +1,43 @@
+type CallbackObject = {
+    callback: Function
+    id: String
+}
+
 export default class EventDriver {
     id: string;
     data?: any;
-    self: HTMLElement;
-    event: Event;
+    callbacks: Array<CallbackObject>;
+    console_log: boolean;
 
     constructor(props: any) {
-        this.id = props.action;
-        this.self = document.createElement("div");
-        this.self.id = this.id;
-        this.event = new CustomEvent(this.id)
+        this.id = props.id;
+        this.callbacks = [];
+        this.console_log = typeof props.console_log === "boolean" ? props.console_log : true;
     }
 
-    subscribe (callback: Function) {
-        this.self.addEventListener(
-            this.id,
-            (e: any) => {
-                if (typeof callback === "function") {
-                    callback(this.data);
-                }
-            }
-        )
+    subscribe (callback: Function, callback_id?: string) {
+        let obj = {
+            id: callback_id ? callback_id : "",
+            callback
+        }
+        this.callbacks.push(obj);
     }
 
-    invoke (input?: any) {
+    invoke (input?: any, callback_id?: string) {
         this.data = input;
-        this.self.dispatchEvent(this.event);
+        if (typeof callback_id !== "undefined") {
+            var call = this.callbacks.find(call => {call.id === callback_id});
+            if (typeof call !== "undefined") {
+                call.callback(input);
+            }
+            else if(this.console_log === true) {
+                console.error("ERROR - EventDriver: Invalid callback id.")
+            }
+        }
+        else {
+            for(const call of this.callbacks) {
+                call.callback(input);
+            }
+        }
     }
 }
